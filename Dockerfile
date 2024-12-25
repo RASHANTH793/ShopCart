@@ -5,7 +5,8 @@ FROM tomcat:10.1
 WORKDIR /usr/local/tomcat/webapps
 
 # Copy the WAR file from the context directory to the Tomcat webapps directory
-COPY ./shopcart.war /usr/local/tomcat/webapps/
+COPY shopcart.war /usr/local/tomcat/webapps/
+
 
 # Expose port 8080 (the default Tomcat port)
 EXPOSE 8080
