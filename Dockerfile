@@ -9,7 +9,7 @@ COPY shopcart1.war /usr/local/tomcat/webapps/
 
 
 # Expose port 8080 (the default Tomcat port)
-EXPOSE 8080
+EXPOSE 8443
 
 # Start Tomcat
 CMD ["catalina.sh", "run"]
