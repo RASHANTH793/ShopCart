@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Server xmlns="http://tomcat.apache.org/schema/catalina"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://tomcat.apache.org/schema/catalina http://tomcat.apache.org/xsd/catalina-9.0.xsd">
+
+    <!-- Global Server Configuration -->
+    <Service name="Catalina">
+        
+        <!-- HTTP Connector (Default Port 8080) -->
+        <Connector port="8080" protocol="HTTP/1.1" 
+                   connectionTimeout="20000" 
+                   redirectPort="8443" />
+
+        <!-- Define the Host (Your application’s virtual host) -->
+        <Engine name="Catalina" defaultHost="localhost">
+            
+            <!-- Context for your Web Application (Update with the path to your WAR) -->
+            <Host name="localhost" appBase="webapps" unpackWARs="true" autoDeploy="true">
+                
+                <!-- Your deployed web application context -->
+                <Context path="/shopcart1" docBase="shopcart1.war" reloadable="true"/>
+                
+            </Host>
+        </Engine>
+    </Service>
+</Server>

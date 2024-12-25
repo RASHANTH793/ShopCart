@@ -4,4 +4,13 @@
   <welcome-file-list>
     <welcome-file>Home.jsp</welcome-file>
   </welcome-file-list>
+  <servlet>
+    <servlet-name>healthCheckServlet</servlet-name>
+    <servlet-class>com.example.HealthCheckServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+    <servlet-name>healthCheckServlet</servlet-name>
+    <url-pattern>/healthz</url-pattern>
+</servlet-mapping>
+
 </web-app>
